@@ -1,0 +1,8 @@
+version: 0.0.0
+name: aliyun_sdk
+scripts:
+  dev: 
+    cmd: 'deno run example/green_text_scan_sample.ts'
+    watch: false
+    allow:
+      - net
