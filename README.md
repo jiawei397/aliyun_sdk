@@ -9,7 +9,7 @@
 代码如下：
 
 ```typescript
-import { green, uuid } from "https://deno.land/x/aliyun_sdk@v0.0.2/mod.ts";
+import { green, uuid } from "https://deno.land/x/aliyun_sdk@v0.0.3/mod.ts";
 
 const accessKeyId = "xx";
 const accessKeySecret = "xx";
