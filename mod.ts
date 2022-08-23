@@ -85,11 +85,17 @@
  *   "requestId": "ED2F1154-AFF9-55E1-A78D-B3D1E5BFB4F6"
  * }
  * ```
+ * @module
  */
-export * from "./src/green_deno_invoker.ts";
+export { green } from "./src/green_deno_invoker.ts";
 
-export type { BizCfg, ClientInfo, RequestHeaders } from "./src/types.ts";
+export type {
+  BizCfg,
+  ClientInfo,
+  GreenResult,
+  RequestHeaders,
+} from "./src/types.ts";
 
 export * from "./src/utils.ts";
 
-export * from "./deps.ts";
+export { uuid } from "./deps.ts";

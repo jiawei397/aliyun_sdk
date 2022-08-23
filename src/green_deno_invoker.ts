@@ -1,8 +1,9 @@
 import { base64, hmac, uuid } from "../deps.ts";
-import { BizCfg, RequestHeaders } from "./types.ts";
+import { BizCfg, GreenResult, RequestHeaders } from "./types.ts";
 import { md5 } from "./utils.ts";
 
-export async function green(bizCfg: BizCfg) {
+/**调用阿里云的API进行校验 */
+export async function green<T = GreenResult>(bizCfg: BizCfg): Promise<T> {
   const { clientInfo, greenVersion, requestBody } = bizCfg;
   const gmtCreate = new Date().toUTCString();
   const md5Str = base64.fromUint8Array(md5(requestBody));

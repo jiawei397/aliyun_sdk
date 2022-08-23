@@ -20,3 +20,32 @@ export interface RequestHeaders {
   "x-acs-signature-method": string;
   Authorization?: string;
 }
+
+export interface GreenResult {
+  code: number;
+  data: Datum[];
+  msg: string;
+  requestId: string;
+}
+
+interface Datum {
+  code: number;
+  content: string;
+  dataId: string;
+  filteredContent: string;
+  msg: string;
+  results: Result[];
+  taskId: string;
+}
+
+interface Result {
+  details: Detail[];
+  label: string;
+  rate: number;
+  scene: string;
+  suggestion: string;
+}
+
+interface Detail {
+  label: string;
+}
